@@ -1,0 +1,95 @@
+// import dark theme
+
+@use "element-plus/theme-chalk/src/dark/css-vars.scss" as *;
+@use 'element-plus/theme-chalk/src/message-box.scss';
+// :root {
+//   --ep-color-primary: red;
+// }
+
+body {
+  font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB",
+    "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+
+}
+html,body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+    background-color: transparent;
+    // box-shadow: var(--el-box-shadow);
+}
+
+* {
+  box-sizing: border-box;
+}
+#app {
+  border-radius: 12px;
+  width: 100%;
+  height: 100%;
+  background-color: var(--el-bg-color-page);
+    color: var(--el-text-color-primary);
+    border: var(--el-border);
+    // box-shadow: var(--el-box-shadow);
+    overflow: hidden;
+}
+:focus,
+:focus-within {
+  outline: none;
+}
+a {
+  color: var(--ep-color-primary);
+}
+
+code {
+  border-radius: 2px;
+  padding: 2px 4px;
+  background-color: var(--ep-color-primary-light-9);
+  color: var(--ep-color-primary);
+}
+
+.el-color-picker {
+  &:hover:not(.is-disabled) .el-color-picker__trigger{
+    border: none;
+  }
+  .el-color-picker__trigger {
+    border: none;
+    // width: 28px;
+    // height: 28px;
+    .el-color-picker__color {
+      border: none;
+      border-radius: 50%;
+      overflow: hidden;
+      .el-color-picker__icon {
+        display: none;
+      }
+    }
+  }
+}
+.el-color-dropdown__btns {
+  button:first-of-type {
+    display: none;
+  }
+}
+@media print {
+  @page {
+    margin: 0;
+    size: A4 portrait;
+  }
+  *:not(.toastui-editor-contents) {
+    visibility: hidden;
+  }
+  .toastui-editor-contents {
+    visibility: visible;
+    position: fixed;
+    inset: 0;
+    display: block;
+    width: 95%;
+    margin: 0 auto;
+    * {
+      visibility: visible;
+    }
+  }
+}

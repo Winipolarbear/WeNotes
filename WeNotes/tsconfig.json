@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "jsx": "preserve",
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "sourceMap": true,
+    "baseUrl": "./",
+    "strict": false,
+    "paths": {
+      "@/*": ["src/*"]
+    },
+    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true,
+    "types": ["element-plus/global", "pinia-plugin-persist"]
+  },
+  "include": [
+    "src",
+    // "electron/main/**/*.ts",
+    // "electron/preload/**/*.ts",
+    "./auto-imports.d.ts",
+    "./components.d.ts"
+  ],
+  "references": [{ "path": "./tsconfig.node.json" }]
+}
